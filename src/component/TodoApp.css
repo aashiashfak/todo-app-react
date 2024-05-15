@@ -1,0 +1,81 @@
+body {
+  background-color: #1e1e1e; /* Dark premium background color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+}
+
+.todo-container {
+  max-width: 400px;
+  margin: 50px auto; /* Center the container vertically */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #2b2b2b; /* Darker container background color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff; /* Light text color */
+  font-weight: 400; /* Light font weight */
+  font-size: 24px; /* Larger font size */
+}
+
+.input-section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none; /* Remove border */
+  border-radius: 5px 0 0 5px;
+  background-color: #333; /* Darker input background */
+  color: #fff; /* Light text color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+}
+
+input[type="text"]:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+input[type="text"]:focus {
+  outline: none; /* Remove default focus outline */
+  border: 1px solid #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow on focus */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #495057; /* Matching button color */
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+}
+button:hover {
+  background-color: darkslategray; /* Darker button color on hover */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #333; /* Darker list item background */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow for list items */
+  color: #fff; /* Light text color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+}
+
+li:hover {
+  background-color: #444; /* Darker background on hover */
+}
