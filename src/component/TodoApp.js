@@ -4,29 +4,35 @@ import "./TodoApp.css";
 class TodoApp extends Component {
   state = {
     input: "",
-    items:[]
+    items: [],
   };
 
   handleChange = (event) => {
     this.setState({
       input: event.target.value,
     });
-    console.log(this.state.input)
   };
 
   storeItems = (event) => {
     event.preventDefault();
-    const {input} = this.state
+    const {input} = this.state;
 
     this.setState({
       items: [...this.state.items, input],
-      input:""
-    })
-    console.log(this.state.items)
+      input: "",
+    });
+    console.log(this.state.items);
   };
 
+  deleteData = (key)=>{
+    this.setState({
+      items:this.state.items.filter((data,index)=> index!== key)
+    })
+    console.log(this.state.items)
+  }
+
   render() {
-    const {input,items} = this.state;
+    const {input, items} = this.state;
     return (
       <form>
         <div className="todo-container">
@@ -46,7 +52,11 @@ class TodoApp extends Component {
             <li key={index}>
               {data}
               <div>
-                <i id="delete-icon" className="fa-solid fa-trash-can"></i>
+                <i
+                  onClick={() => this.deleteData(index)}
+                  id="delete-icon"
+                  className="fa-solid fa-trash-can"
+                ></i>
               </div>
             </li>
           ))}
